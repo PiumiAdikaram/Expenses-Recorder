@@ -4,6 +4,7 @@ const Transaction = require('../models/Transaction');
 // @access  Public
 
 exports.getTransactions = async(req, res, next) => {
+ // res.send('GET Transactions');
   try {
     const transactions = await Transaction.find();
 
@@ -25,8 +26,9 @@ exports.getTransactions = async(req, res, next) => {
 // @access  Public
 
 exports.addTransaction = async (req, res, next) => {
+ // res.send('ADD Transaction');
   try {
-    const { text, amount } = req.body;
+    const { text, amount } = req.body;//validate user input
 
     const transaction = await Transaction.create(req.body);
   
@@ -57,6 +59,8 @@ exports.addTransaction = async (req, res, next) => {
 // @access  Public
 
 exports.deleteTransaction = async (req, res, next) => {
+  //res.send('DELETE Transaction');
+  
   try {
     const transaction = await Transaction.findById(req.params.id);
 
