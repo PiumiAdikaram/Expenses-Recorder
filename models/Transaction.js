@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//validation
 const TransactionSchema = new mongoose.Schema({
   text: {
     type: String,

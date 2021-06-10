@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 //const { getTransactions } = require('../client/controllers/transactions');
-
 //router.get('/',(req, res)=> res.send('Hello'));
 
 const { getTransactions, addTransaction, deleteTransaction } = require('../controllers/transactions');
